@@ -18,6 +18,11 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include <stdio.h>
+#include <assert.h>
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -166,7 +171,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  initialise_stdlib_abstraction()
+  initialise_stdlib_abstraction();
 
   vTaskStartScheduler();
   /* USER CODE END 2 */
